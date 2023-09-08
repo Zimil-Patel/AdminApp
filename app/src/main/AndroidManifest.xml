@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Admin app"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AdminApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".splashScreen"
+            android:exported="true"
+            android:screenOrientation="locked" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".requests_inbox"
+            android:exported="false"
+            android:label="Request/Inbox"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".loginScreen"
+            android:exported="false"
+            android:screenOrientation="locked"/>
+        <activity
+            android:name=".manage_announcement"
+            android:exported="false"
+            android:label="Announcements/Notice"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".update_faculty_info"
+            android:exported="false"
+            android:label="Updating Detail"
+            android:parentActivityName=".update_faculties"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".add_faculty"
+            android:exported="false"
+            android:label="Adding Faculty"
+            android:parentActivityName=".update_faculties"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".update_faculties"
+            android:exported="false"
+            android:label="Faculties Detail"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".books_upload"
+            android:exported="false"
+            android:label="Upload Study material"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".photo_upload"
+            android:exported="false"
+            android:label="Upload Images"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".notice_upload"
+            android:exported="false"
+            android:label="Make Announcement/Notice"
+            android:parentActivityName=".manage_announcement"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="locked" />
+    </application>
+
+</manifest>
